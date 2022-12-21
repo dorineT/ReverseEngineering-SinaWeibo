@@ -91,7 +91,7 @@ conceptual schema conceptualSchema{
 	    id 
 	  }    
 	}
-	entity type REPOST_TABLE{
+	entity type REPOSTS_TABLE{
 	  id : int,
 	  accountid : string,
 	  timelinedata : string
@@ -344,7 +344,7 @@ physical schemas {
 		}
 		
 		
-		table REPOST_TABLE{
+		table REPOSTS_TABLE{
 			columns{
 				id,
 				accountid,
@@ -515,7 +515,7 @@ mapping rules {
 	conceptualSchema.HOME_OTHER_GROUP_DATA_TABLE(id,accountid,mblogid,groupid,jsondata) -> relSchema.HOME_OTHER_GROUP_DATA_TABLE(id,accountid,mblogid,groupid,jsondata),
 	conceptualSchema.COMMENTS_TABLE(id, accountid,timelinedata) -> relSchema.COMMENTS_TABLE(id, accountid,timelinedata),
 	conceptualSchema.COMMENTS_DATA_TABLE(id ,accountid,mblogid,jsondata ) -> relSchema.COMMENTS_DATA_TABLE(id, accountid,mblogid,jsondata),
-	conceptualSchema.REPOST_TABLE(id,accountid,timelinedata) -> relSchema.REPOST_TABLE(id,accountid,timelinedata),
+	conceptualSchema.REPOSTS_TABLE(id,accountid,timelinedata) -> relSchema.REPOSTS_TABLE(id,accountid,timelinedata),
 	conceptualSchema.REPOSTS_DATA_TABLE(id ,accountid,mblogid,jsondata) -> relSchema.REPOSTS_DATA_TABLE(id ,accountid,mblogid,jsondata ),
 	conceptualSchema.MENTION_COMMENTS_TABLE(id ,accountid,timelinedata) -> relSchema.MENTION_COMMENTS_TABLE(id ,accountid,timelinedata),
 	conceptualSchema.MENTION_COMMENTS_DATA_TABLE(id ,accountid,mblogid,jsondata ) -> relSchema.MENTION_COMMENTS_DATA_TABLE(id ,accountid,mblogid,jsondata ),
